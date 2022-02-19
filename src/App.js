@@ -59,10 +59,10 @@ export default class App extends Component {
   };
 
   render() {
-    const { filter, contacts } = this.state;
+    const { filter } = this.state;
     const filterRegister = filter.toLowerCase();
-    const filteredContacts = contacts.filter(({ name }) =>
-      name.toLowerCase().includes(filterRegister)
+    const filteredContacts = this.state.contacts.filter((contact) =>
+      contact.name.toLowerCase().includes(filterRegister)
     );
     return (
       <>
